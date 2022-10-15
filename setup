@@ -1,0 +1,42 @@
+1.) Name the project <project>-development
+2.) Click on build
+3.) Click on authentication
+4.) Click on email/password
+5.) Create <project>-production project
+6.) Click on project overview
+7.) Web embed
+8.) Name app
+9.) Open VS Code
+10.) mkdir <project name>
+11.) cd <project name>
+12.) create-react-app <project name>
+13.) create .env.local for local variables
+14.) In that file add:
+
+REACT_APP_FIREBASE_API_KEY=AIzaSyD9Nw5Dl_cIZcs-HWTPxNtAiuBSN5loS4E
+REACT_APP_FIREBASE_AUTH_DOMAIN=auth-development-1527d.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=auth-development-1527d
+REACT_APP_FIREBASE_STORAGE_BUCKET=auth-development-1527d.appspot.com
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=762893537090
+REACT_APP_FIREBASE_APP_ID=1:762893537090:web:5f51d83c472b52c74382db
+REACT_APP_FIREBASE_MEASUREMENT_ID=G-5PYJ8XXQH2
+
+15.) Create firebase.js file
+16.) npm i firebase
+17.) Add to firebase.js:
+
+import firebase from "firebase/app"
+import "firebase/auth"
+
+const app = firebase.initializeApp({
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+
+})
+18.) npm i bootstrap react-bootstrap
+19.) Delete css and test files
